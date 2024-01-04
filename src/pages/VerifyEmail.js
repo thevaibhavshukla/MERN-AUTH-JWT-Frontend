@@ -9,7 +9,7 @@ function VerifyEmail() {
   const verifyToken = async () => {
     try {
       toast.loading();
-      const response = await axios.post("https://mern-auth-jwt-backend.onrender.com/api/auth/verifyemail", {
+      const response = await axios.post("/api/auth/verifyemail", {
         token: params.token,
       });
       if (response.data.success) {
@@ -25,7 +25,7 @@ function VerifyEmail() {
   };
 
   useEffect(() => {
-    verifyToken();
+    return () => {verifyToken()};
   }, []);
 
   return (

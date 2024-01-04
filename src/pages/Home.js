@@ -12,7 +12,7 @@ function Home() {
     toast.loading();
     try {
       const token = localStorage.getItem("user");
-      const response = await axios.get("https://mern-auth-jwt-backend.onrender.com/api/user/get-user-info", {
+      const response = await axios.get("/api/user/get-user-info", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -34,7 +34,7 @@ function Home() {
 
   useEffect(() => {
     if (userInfo == null) {
-      getData();
+      return () => {getData()};
     }
   }, [userInfo]);
 
