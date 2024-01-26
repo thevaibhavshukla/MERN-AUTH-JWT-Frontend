@@ -19,6 +19,8 @@ function Register() {
       try {
         toast.loading("Loading...");
         const response = await axios.post("https://mern-auth-jwt-backend.onrender.com/api/auth/register", userObj);
+        // const response = await axios.post("/api/auth/register", userObj);
+
         toast.dismiss();
         if (response.data.success) {
           toast.success(response.data.message);
