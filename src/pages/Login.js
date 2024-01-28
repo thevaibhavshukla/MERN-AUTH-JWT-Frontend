@@ -15,6 +15,7 @@ function Login() {
     try {
       toast.loading("Loading...");
       const response = await axios.post("https://mern-auth-jwt-backend.onrender.com/api/auth/login", userObj);
+      // const response = await axios.post("http://localhost:5000/api/auth/login", userObj);
       // const response = await axios.post("/api/auth/login", userObj);
 
       toast.dismiss();
@@ -37,6 +38,9 @@ function Login() {
       const response = await axios.post("https://mern-auth-jwt-backend.onrender.com/api/auth/send-password-reset-link", {
         email,
       });
+      // const response = await axios.post("http://localhost:5000/api/auth/send-password-reset-link", {
+      //   email,
+      // });
       // const response = await axios.post("/api/auth/send-password-reset-link", {
       //   email,
       // });

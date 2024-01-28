@@ -17,6 +17,11 @@ function Home() {
           Authorization: `Bearer ${token}`,
         },
       });
+      // const response = await axios.get("http://localhost:5000/api/user/get-user-info", {
+      //   headers: {
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      // });
       // const response = await axios.get("/api/user/get-user-info", {
       //   headers: {
       //     Authorization: `Bearer ${token}`,

@@ -12,6 +12,9 @@ function VerifyEmail() {
       const response = await axios.post("https://mern-auth-jwt-backend.onrender.com/api/auth/verifyemail", {
         token: params.token,
       });
+      // const response = await axios.post("http://localhost:5000/api/auth/verifyemail", {
+      //   token: params.token,
+      // });
       // const response = await axios.post("/api/auth/verifyemail", {
       //   token: params.token,
       // });

@@ -14,6 +14,10 @@ function ResetPassword() {
         password,
         token: params.token,
       });
+      // const response = await axios.post("http://localhost:5000/api/auth/reset-password", {
+      //   password,
+      //   token: params.token,
+      // });
       // const response = await axios.post("/api/auth/reset-password", {
       //   password,
       //   token: params.token,
